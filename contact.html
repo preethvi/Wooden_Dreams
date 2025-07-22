@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="woodenDreams.css">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Wooden Dreams</title>
+    <style>
+    .cnt-title{
+    text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8dcc2;
+  font-family: 'Inter', sans-serif;
+  
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding: 60px;
+}
+
+.contact-info {
+  background-color: #fff8ee;
+  padding: 25px 30px;
+  border-radius: 8px;
+  width: 300px;
+  border: ipx solid white;
+  margin-right: 30px;
+  height: 500px;
+ 
+}
+
+.info-box {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px; padding-right: 30px;
+}
+
+.info-box .icon {
+  font-size: 20px;
+  margin-top: 5px;
+}
+.info-box img{
+    width: 40px;
+    height: 23px;
+    padding-right: 15px;
+}
+
+
+.info-box h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+.info-box p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Contact Form */
+.contact-form {
+  background-color: #fff8ee;
+  padding: 30px;
+  border-radius: 8px;
+  width: 600px;
+  height: 650px;
+   border: ipx solid white;
+   padding-left: 40px;
+   
+   position: relative;
+   top: -30px;
+  
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  font-size: 19px;
+  margin: 15px 0 5px;
+  color: black;
+  padding-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  resize: vertical;
+  height: 30px;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #c99c52;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #b5883e;
+}
+.info{
+  text-align: center;
+}
+.info h2{
+  font-size: 30px;
+}
+.info p{
+  font-size: 22px;
+}
+.posterheading p{
+  font-size: 30px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbarShortIcon" id="navbarShortIcon" onclick="displayNavbar()">
+            <img src="image/menu_icon.png" alt="menu icon">
+        </div>
+        <div class="logoArea" id="logoArea" onclick="window.location.href='index.html'">
+            <img src="image/logo.png" alt="logo image">
+            <span class="companyName">Wooden  Dreams</span>
+        </div>
+        <nav class="headerNavbar" id="headerNavbar">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="categories.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+        <div class="headerFunctionArea">
+            <div class="searchArea">
+                <img src="image/search_icon.png" alt="search icon">
+                <span>Search</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='cartpage.html'">
+                <img src="image/cart_icon.png" alt="cart icon">
+                <span id="cartitemcount">(0)</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='wishlistpage.html'">
+                <img src="image/wishlist_icon.png" alt="wishlist icon">
+                <span id="wishitemcount">(0)</span>
+            </div>
+            <button class="signInorSignUpbtn" id="signInorSignUpbtn" onclick="signinSignout()"></button>
+        </div>
+    </header>
+    <main>
+         <div class="contactpageposter poster">
+            <div class="postercontent blogcontactpostercontent">
+                <p class="posterheading">Contact</p>
+                <div><span class="posterfirstword">Home</span><span style="font-size: 18px; font-weight: 500;"> > </span><span class="postersecondword"> Contact</span></div>
+            </div>
+        </div>
+        <section class="contact-section">
+    <div class="container">
+      <div class="info">
+        <br> <br> <br>
+      <h2 class="section-title">Get in Touch</h2> <br>
+      <p class="section-subtitle">We’re here to answer any questions you may have about our furniture or services.</p></div>
+        <div class="contact-container">
+    <!-- Contact Info Box -->
+    <div class="contact-info">
+      <div class="info-box">
+        <!-- <p class="icon">📍</p> -->
+         <img src="images/p.png" alt="">
+
+        <div>
+          <h2>Address</h2>
+          <h4>298 St8 6th Avenue, New York NY10001, United States</h4>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <!-- <p class="icon">📞</p> -->
+         <img src="images/bxs_phone.png" alt="">
+        <div>
+          <h2>Phone</h2>
+          <h4>Mobile: (+84) 646-9798<br>Hotline: (+84) 456-7798</h4>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <!-- <p class="icon">🕒</p> -->
+         <img src="images/bi_clock-fill.png" alt="">
+        <div>
+          <h2>Working Time</h2>
+          <h4>Monday-Friday: 8:00 - 21:00<br>Saturday-Sunday: 9:00 - 20:00</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form Box -->
+    <div class="contact-form">
+      <form>
+        <label>Your name</label>
+        <input type="text" placeholder="Abc" required>
+
+        <label>Email address</label>
+        <input type="email" placeholder="abc@gmail.com" required>
+
+        <label>Subject</label>
+        <input type="text" placeholder="This is an optional">
+
+        <label>Message</label>
+        <textarea placeholder="Hi! I'd like to ask about..."></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+    </section>
+
+      <!-- <div class="contact-grid">  -->
+        <!-- Contact Info -->
+        <!-- <div class="contact-info">
+          <h3>Contact Information</h3>
+          <p>Feel free to reach out to us via phone or email, or visit our showroom.</p>
+          <ul>
+            <li><strong>Phone:</strong> +91 98765 43210</li>
+            <li><strong>Email:</strong> support@woodendreams.com</li>
+            <li><strong>Address:</strong> 1234 Furniture Street, Chennai, India</li>
+          </ul>
+
+          <iframe 
+            src="https://www.google.com/maps?q=chennai&output=embed"
+            class="map" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div> -->
+
+        <!-- Contact Form -->
+        <!-- <div class="contact-form">
+          <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Your name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Your email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="6" placeholder="Your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+    </main> -->
+    <footer>
+        <div class="footerarea">
+            <div class="footer-section-about">
+                <div class="footerheadericon">
+                    <img src="image/logo.png" alt="Logo"><span>Wooden Dreams</span>
+                </div> 
+                <p class="footeraboutcontent">"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+                <div class="footeraddress">
+                    <div class="footeraddressitems">
+                        <img src="image/loaction_icon.png" class="icon"><p>Head Office 13/5,Post office oppsite, Chennai.876543</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/website_icon.png" class="icon"><p>www.woodendreams.in</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/mail_icon.png" class="icon"><p>woodendreams@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section-links">
+                <h3>LINKS</h3>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-help">
+                <h3>HELP</h3>
+                <ul>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-subscribe">
+                <div class="subscribe-section">
+                    <h2>Subscribe</h2>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" id="customeremail">
+                        <button>SIGN UP</button>
+                    </div>
+                </div>
+                <div class="follow-us">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <div class="socialiconbox">
+                            <img src="image/instagram_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/google_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/facebook_icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footerline">
+        <p class="footercopyright">2025 Wooden Dreams. All rights reserved.</p>
+    </footer>
+
+    <script src="woodenDreams.js"></script>
+    <script>
+
+      window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            // The page was restored from the cache (like going back)
+            window.location.reload(); // force reload so your logic runs again
+        }
+        });
+
+        
+        updateloginstatus()
+        updatecartcount()
+        updatewishlistcount()
+    </script>
+</body>
+</html>

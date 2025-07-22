@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="woodenDreams.css">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Wooden Dreams</title>
+    <style>
+        .checkout-container {
+        display: flex;
+        gap: 30px;
+        max-width: 1200px;
+        min-width: 300px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 16px;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        flex-wrap: wrap;
+
+        }
+
+        /* Left form section */
+        .form-section {
+        flex: 2;
+        min-width: 300px;
+        }
+
+        .form-section h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        color: #111827;
+        }
+
+        .form-section form {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        }
+
+        .form-section input,
+        .form-section select {
+        padding: 14px 16px;
+        font-size: 15px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        background: #B88E2F;
+        color: #FFFFFF;
+        transition: all 0.2s ease;
+        outline: none;
+        }
+
+        .form-section input:focus,
+        .form-section select:focus {
+        border: none;
+        background: #B88E2F;
+        }
+
+        .form-row {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        }
+
+        .form-row input,
+        .form-row select {
+        flex: 1;
+        }
+
+        /* Right summary section */
+        .summary-section {
+        flex: 1.2;
+        min-width: 280px;
+        background: #f9fafb;
+        padding: 25px 20px;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .summary-section h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #111827;
+        text-align: center;
+        }
+
+        /* Cart Items */
+        .cart-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e5e7eb;
+        }
+
+        .cart-item img {
+        width: 64px;
+        height: 64px;
+        border-radius: 8px;
+        margin-right: 15px;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        }
+
+        .item-details {
+        flex-grow: 1;
+        }
+
+        .item-title {
+        font-weight: 600;
+        font-size: 15px;
+        color: #111;
+        }
+
+        .item-color-size {
+        font-size: 13px;
+        color: #6b7280;
+        line-height: 1.4;
+        }
+
+        .item-price {
+        font-weight: 600;
+        font-size: 14px;
+        color: #111;
+        }
+
+        /* Totals */
+        .order-totals {
+        margin-top: 25px;
+        font-size: 15px;
+        }
+
+        .order-totals div {
+        display: flex;
+        justify-content: space-between;
+        margin: 8px 0;
+        color: #374151;
+        }
+
+        .total {
+        font-size: 17px;
+        font-weight: 700;
+        margin-top: 15px;
+        color: #111827;
+        }
+
+        /* Button */
+        .confirm-button {
+        margin-top: 30px;
+        width: 100%;
+        background-color: #B88E2F;
+        color: white;
+        border: none;
+        padding: 16px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+        box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+        }
+
+        .confirm-button:hover {
+        background-color: #4338ca;
+        transform: translateY(-2px);
+        }
+
+        
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+        .checkout-container {
+            flex-direction: column-reverse;
+            padding: 30px 10px;
+        }
+
+        .form-row {
+            flex-direction: column;
+        }
+
+        .summary-section {
+            margin-top: 30px;
+        }
+        }
+
+        .payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.payment-methods label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #f7f7f7;
+  padding: 12px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.payment-methods label:hover {
+  border-color: #b88e2f;
+  background-color: #fffbe7;
+}
+
+.payment-methods input[type="radio"] {
+  accent-color: #b88e2f;
+  transform: scale(1.2);
+}
+
+.payment-methods img {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .payment-methods {
+    gap: 10px;
+  }
+
+  .payment-methods img {
+    width: 24px;
+    height: 24px;
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbarShortIcon" id="navbarShortIcon" onclick="displayNavbar()">
+            <img src="image/menu_icon.png" alt="menu icon">
+        </div>
+        <div class="logoArea" id="logoArea" onclick="window.location.href='index.html'">
+            <img src="image/logo.png" alt="logo image">
+            <span class="companyName">Wooden  Dreams</span>
+        </div>
+        <nav class="headerNavbar" id="headerNavbar">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="categories.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="headerFunctionArea">
+            <div class="searchArea">
+                <img src="image/search_icon.png" alt="search icon">
+                <span>Search</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='cartpage.html'">
+                <img src="image/cart_icon.png" alt="cart icon">
+                <span id="cartitemcount">(0)</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='wishlistpage.html'">
+                <img src="image/wishlist_icon.png" alt="wishlist icon">
+                <span id="wishitemcount">(0)</span>
+            </div>
+            <button class="signInorSignUpbtn" id="signInorSignUpbtn" onclick="signinSignout()"></button>
+        </div>
+    </header>
+    <main>
+        
+
+  <div class="checkout-container">
+    <!-- Left: Form -->
+    <div class="form-section">
+      <h2>Contact information</h2>
+      <form id="checkoutForm">
+        <input type="email" id="email" placeholder="Email address" required />
+
+        <h2>Shipping information</h2>
+        <div class="form-row">
+          <input type="text" id="firstName" placeholder="First name" required />
+          <input type="text" id="lastName" placeholder="Last name" required />
+        </div>
+        <input type="text" id="company" placeholder="Company (optional)" />
+        <input type="text" id="address" placeholder="Address" required />
+        <input type="text" id="apartment" placeholder="Apartment, suite, etc. (optional)" />
+        <div class="form-row">
+          <input type="text" id="city" placeholder="City" required />
+          <select id="country" required>
+            <option value="">Select country</option>
+            <option value="India">India</option>
+          </select>
+        </div>
+        <button type="submit" class="confirm-button">Confirm order</button>
+      </form>
+    </div>
+
+    <!-- Right: Summary -->
+    <div class="summary-section">
+      <h2>Order summary</h2>
+      <div id="cartItems"></div>
+      <div class="order-totals">
+        <div><span>Subtotal</span><span id="subtotalAmount">₹0.00</span></div>
+        <div><span>Shipping</span><span id="shippingAmount">₹500.00</span></div>
+        <div><span>Taxes</span><span id="taxAmount">₹0.00</span></div>
+        <div class="total"><span>Total</span><span id="totalAmount">₹0.00</span></div>
+      </div>
+      <h3 style="margin-top: 40px;">Select Payment Method</h3>
+<div class="payment-methods">
+  <label>
+    <input type="radio" name="payment" value="upi" required >
+    <img src="image/upi.jpg" alt="UPI">
+    UPI
+  </label>
+  <label>
+    <input type="radio" name="payment" value="card">
+    <img src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="Card" >
+    Credit/Debit Card
+  </label>
+  <label>
+    <input type="radio" name="payment" value="cod">
+    <img src="https://img.icons8.com/fluency/48/cash-in-hand.png" alt="Cash">
+    Cash on Delivery
+  </label>
+</div>
+    </div>
+    
+  </div>
+
+
+    </main>
+    <footer>
+        <div class="footerarea">
+            <div class="footer-section-about">
+                <div class="footerheadericon">
+                    <img src="image/logo.png" alt="Logo"><span>Wooden Dreams</span>
+                </div> 
+                <p class="footeraboutcontent">"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+                <div class="footeraddress">
+                    <div class="footeraddressitems">
+                        <img src="image/loaction_icon.png" class="icon"><p>Head Office 13/5,Post office oppsite, Chennai.876543</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/website_icon.png" class="icon"><p>www.woodendreams.in</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/mail_icon.png" class="icon"><p>woodendreams@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section-links">
+                <h3>LINKS</h3>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-help">
+                <h3>HELP</h3>
+                <ul>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-subscribe">
+                <div class="subscribe-section">
+                    <h2>Subscribe</h2>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" id="customeremail">
+                        <button>SIGN UP</button>
+                    </div>
+                </div>
+                <div class="follow-us">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <div class="socialiconbox">
+                            <img src="image/instagram_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/google_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/facebook_icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footerline">
+        <p class="footercopyright">2025 Wooden Dreams. All rights reserved.</p>
+    </footer>
+    <script src="woodenDreams.js"></script>
+    <script>
+
+
+function loadCartItems() {
+  const cartContainer = document.getElementById("cartItems");
+  cartContainer.innerHTML = "";
+  let subtotal = 0;
+  let signinuser = sessionStorage.getItem("wduserid");
+  if(!signinuser){
+    alert("Login in to proceed to checkout");
+    window.location.href("signin.html")
+  }
+    let cartProducts = JSON.parse(localStorage.getItem("wdcartitems")) || [];
+        cartProducts = cartProducts.filter(items => items.loginuserid === signinuser)
+  cartProducts.forEach(product => {
+    subtotal += product.price * product.purchasecount;
+
+    const item = document.createElement("div");
+    item.className = "cart-item";
+    item.innerHTML = `
+      <img src="${product.imagepath}" alt="${product.name}" />
+      <div class="item-details">
+        <div class="item-title">${product.name}</div>
+        <div class="item-color-size">${product.purchasecount} Qty * ${product.price}</div>
+        <div class="item-price">₹${(product.price * product.purchasecount).toFixed(2)}</div>
+      </div>
+    `;
+    cartContainer.appendChild(item);
+  });
+
+  document.getElementById("subtotalAmount").textContent = `₹${subtotal.toFixed(2)}`;
+  const shipping = 500.00;
+  const tax = (subtotal * 0.08); 
+  const total = subtotal + shipping + tax;
+
+  document.getElementById("taxAmount").textContent = `₹${tax.toFixed(2)}`;
+  document.getElementById("totalAmount").textContent = `₹${total.toFixed(2)}`;
+}
+
+
+
+// Form validation
+document.getElementById("checkoutForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value.trim();
+  const first = document.getElementById("firstName").value.trim();
+  const last = document.getElementById("lastName").value.trim();
+  const address = document.getElementById("address").value.trim();
+  const city = document.getElementById("city").value.trim();
+  const country = document.getElementById("country").value;
+
+  if (!email || !first || !last || !address || !city || !country) {
+    alert("Please fill in all required fields.");
+    return;
+  }
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert("Please enter a valid email address.");
+    return;
+  }
+
+  alert("Order confirmed! ✅");
+  let signinuser = sessionStorage.getItem("wduserid");
+  removeallcartlistofuser(signinuser);
+  window.location.href="index.html";
+});
+
+window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            // The page was restored from the cache (like going back)
+            window.location.reload(); // force reload so your logic runs again
+        }
+        });
+
+        loadCartItems();
+        updateloginstatus()
+        updatecartcount()
+        updatewishlistcount()
+    </script>
+</body>
+</html>

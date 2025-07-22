@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="woodenDreams.css">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Wooden Dreams</title>
+    <style>
+
+            
+
+        
+
+        
+        
+        
+
+
+    
+
+    
+    
+
+
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbarShortIcon" id="navbarShortIcon" onclick="displayNavbar()">
+            <img src="image/menu_icon.png" alt="menu icon">
+        </div>
+        <div class="logoArea" id="logoArea" onclick="window.location.href='index.html'">
+            <img src="image/logo.png" alt="logo image">
+            <span class="companyName">Wooden  Dreams</span>
+        </div>
+        <nav class="headerNavbar" id="headerNavbar">
+            <a href="index.html" class="active">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="categories.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="headerFunctionArea">
+            <div class="searchArea">
+                <img src="image/search_icon.png" alt="search icon">
+                <span>Search</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='cartpage.html'">
+                <img src="image/cart_icon.png" alt="cart icon">
+                <span id="cartitemcount">(0)</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='wishlistpage.html'">
+                <img src="image/wishlist_icon.png" alt="wishlist icon">
+                <span id="wishitemcount">(0)</span>
+            </div>
+            <button class="signInorSignUpbtn" id="signInorSignUpbtn" onclick="signinSignout()"></button>
+        </div>
+    </header>
+    <main>
+        <div class="IndexPageDisplayPoster">
+            <img src="image/homepage_poster1.png" alt="display image" class="indexPagePoster1">
+            <div class="indexPageWelcomeText">
+                <p>New Arrival</p>
+                <p>Discover Our New collection</p>
+                <p>Experience the art of wooden craftmanship in our latest collection</p>
+                <a href="shop.html">BUY NOW</a>
+            </div>
+        </div>
+
+        <div class="categorysection indexpagecategorysection">
+            <h1>Popular Categories</h1>
+            <p>Organize your space, elevate your style</p>
+            <div class="displaycategoryarea" id="displaycategoryarea">
+                
+                <!-- categories generated dynamically -->
+                 <!-- <div class="displaysinglecategory" id="${singlecategory.category}">
+                    <div class="categoryimage">
+                        <img src="${singlecategory.imagepath}" alt="${singlecategory.category} image">
+                    </div>
+                    <div class="categoryname">
+                        <span>${singlecategory.category}</span>
+                    </div>
+                </div> -->
+                
+            </div>
+            <a href="categories.html">EXPLORE ALL</a>
+        </div>
+        <div class="productsection indexpageproductsection">
+            <h1>Best Sellers</h1>
+            <p>Our Most Loved Pieces</p>
+            <div class="displayproductarea" id="displaybestsellerproductarea">
+
+                <!-- display products dynamically -->
+                
+                <!-- <div class="displaysingleproduct" id="${singleproduct${index}}">
+                    <div class="productimage">
+                        <img src="image/best sellers/grifo.png" alt="">
+                    </div>
+                    <div class="productdetails">
+                        <div class="productname">
+                            <span>Grifo</span>
+                        </div>
+                        <div class="productdesc">
+                            <span>Grifo Table Lable</span>
+                        </div>
+                        <div class="productpricearea">
+                            <span class="productprice">Rs 7000.00</span><span class="producthighprice">Rs 14000.00</span>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- <div class="displaysingleproduct" id="${singleproduct${index}}">
+                    <div class="productimage">
+                        <img src="${singleproduct.imagepath}" alt="${singleproduct.name} image">
+                    </div>
+                    <div class="productdetails">
+                        <div class="productname">
+                            <span>${singleproduct.name}</span>
+                        </div>
+                        <div class="productdesc">
+                            <span>${singleproduct.shortdesc}</span>
+                        </div>
+                        <div class="productpricearea">
+                            <span class="productprice">Rs ${singleproduct.price}</span><span class="producthighprice">Rs ${singleproduct.highprice}</span>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- <div class="displaysingleproduct" id="${singleproduct${index}}">
+                    
+                    <div class="addtocartarea">
+                        <div>
+                            <button class="addtocartbtn" id="addtocartbtn">Add to cart</button>
+                        </div>
+                        <div class="addtocartareafunctionbtn">
+                            <div class="sharebtnarea" id="sharebtnarea">
+                                <img src="image/share_icon.png" alt="">
+                                <span>Share</span>
+                            </div>
+                            <div class="quickviewbtnarea">
+                                <img src="image/quickview_icon.png" alt="">
+                                <span>Quick View</span>
+                            </div>
+                            <div class="wishlistbtnarea">
+                                <img src="image/emptyheart_icon.png" alt="">
+                                <span>Like</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div> -->
+                
+                
+                
+            </div>
+            <a href="shop.html">EXPLORE ALL</a>
+        </div>
+        <div class="productsection indexpagenewarrivalproductsection">
+            <h1>New Arrivals</h1>
+            <p>Discover What's New</p>
+            <div class="displayproductarea" id="displaynewarrivalsproductarea">
+                
+                <!-- categories generated dynamically -->
+                
+            </div>
+            <a href="shop.html">EXPLORE ALL</a>
+        </div>
+
+        <section class="testimonials">
+  <h2>What Customers Say About Wooden Dreams</h2>
+
+  <div class="testimonial-cards">
+
+    <!-- Testimonial 1 -->
+    <div class="testimonial-card">
+      <img src="image/textimony1.png" alt="Office desk" class="testimonial-img" />
+      <p class="testimonial-text">
+        "I'm absolutely thrilled with my new office desk! The quality is top-notch, and it looks fantastic in my home office."
+      </p>
+      
+      <div class="testimonial-footer">
+        <div class="testimonial-rating">★ ★ ★ ★ ☆</div>
+        <div>
+          <strong>Megna</strong><br />
+          India
+        </div>
+        <span class="views">13.5k View</span>
+      </div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="testimonial-card">
+      <img src="image/testimony2.png" alt="Bed room" class="testimonial-img" />
+      <p class="testimonial-text">
+        "Sleeping on this bed is like resting on a cloud. The mattress is heavenly, and the luxurious materials make me feel pampered every night."
+      </p>
+      
+      <div class="testimonial-footer">
+        <div class="testimonial-rating">★ ★ ★ ★ ★</div>
+        <div>
+          <strong>Shasha</strong><br />
+          USA
+        </div>
+        <span class="views">20.5k View</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="footerarea">
+            <div class="footer-section-about">
+                <div class="footerheadericon">
+                    <img src="image/logo.png" alt="Logo"><span>Wooden Dreams</span>
+                </div> 
+                <p class="footeraboutcontent">"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+                <div class="footeraddress">
+                    <div class="footeraddressitems">
+                        <img src="image/loaction_icon.png" class="icon"><p>Head Office 13/5,Post office oppsite, Chennai.876543</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/website_icon.png" class="icon"><p>www.woodendreams.in</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/mail_icon.png" class="icon"><p>woodendreams@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section-links">
+                <h3>LINKS</h3>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-help">
+                <h3>HELP</h3>
+                <ul>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-subscribe">
+                <div class="subscribe-section">
+                    <h2>Subscribe</h2>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" id="customeremail">
+                        <button>SIGN UP</button>
+                    </div>
+                </div>
+                <div class="follow-us">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <div class="socialiconbox">
+                            <img src="image/instagram_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/google_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/facebook_icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footerline">
+        <p class="footercopyright">2025 Wooden Dreams. All rights reserved.</p>
+    </footer>
+    
+
+
+    <script src="woodenDreams.js"></script>
+    <script>
+
+        window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            // The page was restored from the cache (like going back)
+            window.location.reload(); // force reload so your logic runs again
+        }
+        });
+
+        let displaybestsellerproductarea = document.getElementById("displaybestsellerproductarea");
+
+        
+
+        updateloginstatus()
+        displaycategories()
+        updatecartcount()
+        updatewishlistcount()
+        displayproducts("",displaybestsellerproductarea,"bestsellers")
+        displayproducts("",displaynewarrivalsproductarea,"newarrivals")
+
+    </script>
+</body>
+</html>

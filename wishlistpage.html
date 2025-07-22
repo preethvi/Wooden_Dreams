@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="woodenDreams.css">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Wooden Dreams</title>
+    <style>
+        .washlistdisplayarea{
+            width: 80vw;
+            max-width: 1200px;
+            min-width: 300px;
+            margin: 0 auto;
+            padding: 50px 15px 30px 15px;
+            font-size: 17px;
+            cursor: default;
+            & hr{
+                margin: 20px 5px;
+            }
+        }
+
+        .washlistdisplayarea .cartheadingarea{
+            display: flex;
+            justify-content: space-between;
+            
+        }
+
+        .washlistdisplayarea .cartheadingarea .carttitle{
+            font: 16px;
+            font-weight: 600;
+
+        }
+
+        .washlistdisplayarea .cartheadingarea .cartitemcountdisplay{
+            font-size: medium;
+            margin-left: 5px;
+            color: rgb(155, 155, 155);
+        }
+
+        .washlistdisplayarea .cartheadingarea .clearcartbtn{
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            overflow: hidden;
+            background-color: #B88E2F;
+            color: #FFFFFF;
+            margin-left: 30px;
+            cursor: pointer;
+        }
+
+        .washlistdisplayarea .cartitemsdisplayarea {
+            & img{
+                width: 300px;
+                display: block;
+                margin: auto;
+            }
+            & p{
+                text-align: center;
+            }
+            
+        }
+
+        .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay{
+            display: flex;
+            border: 1px solid rgba(0,0,0,0.3);
+            padding: 20px;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitemimage{
+            width: 100px;
+            display: block;
+        }
+
+        .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitemdescription{
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 3;
+            gap: 5px;
+            width: 450px;
+            & .cartitemname{
+                
+                font-weight: 500;
+            }
+            
+            & .cartitemquantity{
+                color: rgb(155, 155, 155);
+                font-size: 15px;
+            }
+        }
+
+
+        .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitempriceanddiscount{
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            gap: 5px;
+            width: 100px;
+            
+            & .cartitemdiscountprice{
+                color: rgb(155, 155, 155);
+                font-size: 13px;
+                text-decoration: line-through;
+                
+            }
+            & .cartitemprice{
+                font-weight: 500;
+            }
+        }
+
+        
+
+        .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitemfinalprice{
+            
+            padding: 5px;
+            flex-grow: 0;
+            font-weight: 500;
+            text-align: end;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 170px;
+            & .removeitembtn{
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+                overflow: hidden;
+                background-color: #B88E2F;
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+        }
+
+        .washlistdisplayarea .carttotaldisplayarea{
+            display: flex;
+            justify-content: center;
+            
+            padding: 15px;
+        }
+
+        
+
+
+        .washlistdisplayarea .carttotaldisplayarea .continueshoppingbtn{
+            padding: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            color: #000000;
+            border: 2px solid rgb(155, 155, 155);
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-block;
+            font-size: small;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 768.98px) {
+  .washlistdisplayarea {
+    padding: 30px 10px 20px 10px;
+    font-size: 16px;
+  }
+
+  .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay > div {
+    width: 100% !important;
+  }
+
+  .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitemimage {
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  .washlistdisplayarea .carttotaldisplayarea {
+    justify-content: center;
+  }
+
+  .washlistdisplayarea .carttotaldisplayarea .continueshoppingbtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 425.98px) {
+  .washlistdisplayarea .cartheadingarea {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .washlistdisplayarea .cartheadingarea .clearcartbtn {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .washlistdisplayarea .cartitemsdisplayarea .cartsingleitemdisplay .cartitemfinalprice {
+    align-items: center;
+    text-align: center;
+  }
+
+  .washlistdisplayarea .carttotaldisplayarea {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .washlistdisplayarea .carttotaldisplayarea .continueshoppingbtn {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .washlistdisplayarea .cartitemsdisplayarea img {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbarShortIcon" id="navbarShortIcon" onclick="displayNavbar()">
+            <img src="image/menu_icon.png" alt="menu icon">
+        </div>
+        <div class="logoArea" id="logoArea" onclick="window.location.href='index.html'">
+            <img src="image/logo.png" alt="logo image">
+            <span class="companyName">Wooden  Dreams</span>
+        </div>
+        <nav class="headerNavbar" id="headerNavbar">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="categories.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="headerFunctionArea">
+            <div class="searchArea">
+                <img src="image/search_icon.png" alt="search icon">
+                <span>Search</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='cartpage.html'">
+                <img src="image/cart_icon.png" alt="cart icon">
+                <span id="cartitemcount">(0)</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='wishlistpage.html'">
+                <img src="image/wishlist_icon.png" alt="wishlist icon">
+                <span id="wishitemcount">(0)</span>
+            </div>
+            <button class="signInorSignUpbtn" id="signInorSignUpbtn" onclick="signinSignout()"></button>
+        </div>
+    </header>
+    <main>
+
+        <div id="mainwishlistcontainer" class="mainwishcontainer">
+            
+        <!-- wish list products displayed dynamically here  -->
+
+        </div>
+
+    </main>
+    <footer>
+        <div class="footerarea">
+            <div class="footer-section-about">
+                <div class="footerheadericon">
+                    <img src="image/logo.png" alt="Logo"><span>Wooden Dreams</span>
+                </div> 
+                <p class="footeraboutcontent">"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+                <div class="footeraddress">
+                    <div class="footeraddressitems">
+                        <img src="image/loaction_icon.png" class="icon"><p>Head Office 13/5,Post office oppsite, Chennai.876543</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/website_icon.png" class="icon"><p>www.woodendreams.in</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/mail_icon.png" class="icon"><p>woodendreams@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section-links">
+                <h3>LINKS</h3>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-help">
+                <h3>HELP</h3>
+                <ul>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-subscribe">
+                <div class="subscribe-section">
+                    <h2>Subscribe</h2>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" id="customeremail">
+                        <button>SIGN UP</button>
+                    </div>
+                </div>
+                <div class="follow-us">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <div class="socialiconbox">
+                            <img src="image/instagram_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/google_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/facebook_icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footerline">
+        <p class="footercopyright">2025 Wooden Dreams. All rights reserved.</p>
+    </footer>
+    <script src="woodenDreams.js"></script>
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            const container = document.getElementById("mainwishlistcontainer");
+            container.innerHTML = ""; 
+            container.appendChild(createwishLayout());
+        });
+
+        window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            // The page was restored from the cache (like going back)
+            window.location.reload(); // force reload so your logic runs again
+        }
+        });
+
+
+        updateloginstatus()
+        updatecartcount()
+        updatewishlistcount()
+    </script>
+</body>
+</html>

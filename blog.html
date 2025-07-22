@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="woodenDreams.css">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Wooden Dreams</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fefefe;
+  color: #333;
+  line-height: 1.6;
+}
+
+.blog-section {
+  padding: 60px 20px;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 50px;
+}
+
+/* Featured Blog Post */
+.featured-blog {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.featured-image {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featured-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.featured-content h2 {
+  font-size: 26px;
+  color: #B88E2F;
+  margin-bottom: 15px;
+}
+
+.featured-content p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #B88E2F;
+  font-weight: 600;
+}
+
+/* Blog Cards Grid */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.blog-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.blog-card h3 {
+  color: #222;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.blog-card p {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.blog-card a {
+  color: #B88E2F;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .featured-blog {
+    flex-direction: column;
+  }
+
+  .featured-content h2 {
+    font-size: 22px;
+  }
+
+  .section-title {
+    font-size: 28px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbarShortIcon" id="navbarShortIcon" onclick="displayNavbar()">
+            <img src="image/menu_icon.png" alt="menu icon">
+        </div>
+        <div class="logoArea" id="logoArea" onclick="window.location.href='index.html'">
+            <img src="image/logo.png" alt="logo image">
+            <span class="companyName">Wooden  Dreams</span>
+        </div>
+        <nav class="headerNavbar" id="headerNavbar">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="categories.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html" class="active">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="headerFunctionArea">
+            <div class="searchArea">
+                <img src="image/search_icon.png" alt="search icon">
+                <span>Search</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='cartpage.html'">
+                <img src="image/cart_icon.png" alt="cart icon">
+                <span id="cartitemcount">(0)</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='wishlistpage.html'">
+                <img src="image/wishlist_icon.png" alt="wishlist icon">
+                <span id="wishitemcount">(0)</span>
+            </div>
+            <button class="signInorSignUpbtn" id="signInorSignUpbtn" onclick="signinSignout()"></button>
+        </div>
+    </header>
+    <main>
+        <div class="blogpageposter poster">
+            <div class="postercontent blogcontactpostercontent">
+                <p class="posterheading">Blog</p>
+                <div><span class="posterfirstword">Home</span><span style="font-size: 18px; font-weight: 500;"> > </span><span class="postersecondword"> Blog</span></div>
+            </div>
+        </div>
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Blog | Wooden Dreams</title>
+  <link rel="stylesheet" href="blog.css">
+  
+</head>
+<body>
+    <div class="blg-container">
+    <div class="blg-1">
+        <div class="div1">
+            <img src="images/Rectangle 68.png" alt="">
+        </div>
+        <div class="div2">
+            <div class="sidebar">
+    <div class="search-box">
+      <input type="text" placeholder="Search">
+      
+       <img src="images/akar-icons_search.png" alt="">
+    </div>
+
+    <h2 class="category-title">Categories</h2>
+
+    <ul class="category-list">
+      <li><span class="name">Crafts</span><span class="count">2</span></li>
+      <li><span class="name">Design</span><span class="count">8</span></li>
+      <li><span class="name">Handmade</span><span class="count">7</span></li>
+      <li><span class="name">Interior</span><span class="count">1</span></li>
+      <li><span class="name">Wood</span><span class="count">6</span></li>
+    </ul>
+  </div>
+        </div>
+    </div></div>
+    <div class="container3">
+    <!-- Left Content -->
+    <div class="main-content">
+      <div class="post-meta">
+        <span>👤 Admin</span>
+        <span>📅 14 Oct 2022</span>
+        <span>📂 Wood</span>
+      </div>
+
+      <h1>Going all-in with millennial design</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere
+        sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim
+        sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed
+        blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque
+        ornare aenean euismod elementum.
+      </p>
+
+      <a href="#" class="read-more">Read more</a>
+
+      <div class="main-image">
+        <img src="images/Rectangle 68 h.png" alt="Notebook Hand"/>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <aside class="sidebar1">
+      <h3>Recent Posts</h3>
+      <ul class="recent-posts">
+        <li>
+          <img src="images/Rectangle 69.png" alt="thumb1" />
+          <div>
+            <p>Going all-in with millennial design</p>
+            <span>03 Aug 2022</span>
+          </div>
+        </li>
+        <li>
+          <img src="images/Rectangle 69g.png" alt="thumb2" />
+          <div>
+            <p>Exploring new ways of decorating</p>
+            <span>03 Aug 2022</span>
+          </div>
+        </li>
+        <li>
+          <img src="images/Rectangle 69g.png" alt="thumb3" />
+          <div>
+            <p>Handmade pieces that took time to make</p>
+            <span>03 Aug 2022</span>
+          </div>
+        </li>
+        <li>
+          <img src="images/Rectangle 69d.png" alt="thumb4" />
+          <div>
+            <p>Modern home in Milan</p>
+            <span>03 Aug 2022</span>
+          </div>
+        </li>
+      </ul>
+    </aside></div>
+  <div class="container6">
+    <div class="main-content">
+      <div class="post-meta">
+        <span>👤 Admin</span>
+        <span>📅 14 Oct 2022</span>
+        <span>📂 Wood</span>
+      </div>
+
+      <h1>Exploring new ways of decorating</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere
+        sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim
+        sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed
+        blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque
+        ornare aenean euismod elementum.
+      </p>
+
+      <a href="#" class="read-more">Read more</a>
+
+      <div class="main-image">
+        <img src="images/Rectangle 68 p.png" alt="Notebook Hand"/>
+      </div>
+    </div>
+<div class="main-content">
+      <div class="post-meta">
+        <span>👤 Admin</span>
+        <span>📅 14 Oct 2022</span>
+        <span>📂 Wood</span>
+      </div>
+
+      <h1>Exploring new ways of decorating</h1>
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere
+        sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim
+        sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed
+        blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque
+        ornare aenean euismod elementum.
+      </p>
+
+      <a href="#" class="read-more">Read more</a>
+  </div>
+  
+</body>
+</html>
+
+    </main>
+    <footer>
+        <div class="footerarea">
+            <div class="footer-section-about">
+                <div class="footerheadericon">
+                    <img src="image/logo.png" alt="Logo"><span>Wooden Dreams</span>
+                </div> 
+                <p class="footeraboutcontent">"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+                <div class="footeraddress">
+                    <div class="footeraddressitems">
+                        <img src="image/loaction_icon.png" class="icon"><p>Head Office 13/5,Post office oppsite, Chennai.876543</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/website_icon.png" class="icon"><p>www.woodendreams.in</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/mail_icon.png" class="icon"><p>woodendreams@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section-links">
+                <h3>LINKS</h3>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-help">
+                <h3>HELP</h3>
+                <ul>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-subscribe">
+                <div class="subscribe-section">
+                    <h2>Subscribe</h2>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" id="customeremail">
+                        <button>SIGN UP</button>
+                    </div>
+                </div>
+                <div class="follow-us">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <div class="socialiconbox">
+                            <img src="image/instagram_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/google_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/facebook_icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footerline">
+        <p class="footercopyright">2025 Wooden Dreams. All rights reserved.</p>
+    </footer>
+
+    <script src="woodenDreams.js"></script>
+    <script>
+
+      window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            // The page was restored from the cache (like going back)
+            window.location.reload(); // force reload so your logic runs again
+        }
+        });
+        
+        updateloginstatus()
+        updatecartcount()
+        updatewishlistcount()
+    </script>
+</body>
+</html>

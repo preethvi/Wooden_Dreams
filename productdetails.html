@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="woodenDreams.css">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Wooden Dreams</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+            .container {
+                max-width: 1200px;
+                margin: auto;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                padding: 30px;
+                min-width: 320px;
+            }
+
+            .image-gallery {
+                display: flex;
+                gap: 30px;
+            }
+
+            .thumbnails {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .thumbnails img {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                border: 2px solid #ddd;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            .main-image {
+                margin-left: 15px;
+                flex: 1;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            .main-image img {
+                width: 100%;
+                min-height: 300px;
+            }
+
+            .product-info h2 {
+                font-size: 36px;
+                margin-bottom: 10px;
+            }
+
+            .stars {
+                color: goldenrod;
+                margin-bottom: 10px;
+            }
+
+            .price {
+                font-size: 1.5em;
+                color: #000000;
+                margin-bottom: 15px;
+            }
+
+            .price del {
+                color: #888;
+                font-size: 17px;
+                margin-left: 10px;
+            }
+
+            .options, .quantity {
+                margin-bottom: 20px;
+            }
+
+            .options h4,
+            .quantity h4 {
+                margin-bottom: 8px;
+            }
+
+            .color-squares,
+            .size-buttons {
+                display: flex;
+                gap: 10px;
+            }
+
+            .color-squares div {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                border: 2px solid #ccc;
+                cursor: pointer;
+            }
+
+            .size-buttons button {
+                padding: 6px 12px;
+                border: 1px solid #ccc;
+                background: white;
+                cursor: pointer;margin-left: 10px;
+            }
+
+            .quantity input {
+                width: 40px;
+                text-align: center;
+                padding: 5px;
+                margin: 0 5px;
+                &:focus{
+                    background-color: #FFFFFF;
+                    color: #000000;margin-left: 10px;
+                }
+            }
+
+            .buttons {
+                display: flex;
+                gap: 15px;
+                margin-top: 20px;
+                
+            }
+
+            .buttons button {
+                padding: 10px 20px;
+                font-weight: bold;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            .add-cart {
+                background: #eba23d;
+                color: black;
+            }
+
+            .wishlist {
+                background: #e6dfd6;
+                border: 2px solid #f0ad4e;
+                color: black;
+                margin-left: 10px;
+            }
+
+            .tabs {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .tab-buttons {
+                display: flex;
+                gap: 20px;
+                border-bottom: 2px solid #eee;
+                
+            }
+
+            .tab-buttons button {
+                background: none;
+                border: none;
+                padding: 10px 0;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            .tab-buttons .active {
+                border-bottom: 2px solid #f0ad4e;
+                color: #f0ad4e;
+            }
+
+            .tab-content {
+                line-height: 1.7;
+                color: #555;
+                margin-bottom: 15px;
+                width: 100%;
+            }
+
+            @media(max-width: 768px) {
+                .container {
+                    grid-template-columns: 1fr;
+                }
+                .product-info h2 {
+                    font-size: 30px;
+                }
+                .main-image{
+                    flex: 1;
+                }
+                
+                .main-image {
+                    margin: 10px 0 0;
+                }
+            }
+            @media(max-width: 425px) {
+                .image-gallery {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .main-image{
+                    flex: 1;
+                }
+                .thumbnails {
+                    flex-direction: row;
+                    justify-content: center;
+                }
+            }
+
+            table {
+                border-collapse: collapse;
+                margin-top: 0px;
+            }
+
+            table td {
+                padding: 10px 10px;
+                vertical-align: top;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .review-container {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                max-width: 1200px;
+                margin: 0px auto;
+                padding: 20px;
+                
+            }
+
+            .review {
+                background-color: #f9f9f9;
+                border-left: 4px solid #B88E2F;
+                padding: 16px 20px;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            }
+
+            .review h4 {
+                margin: 0 0 5px;
+                font-size: 16px;
+                color: #333;
+            }
+
+            .review strong {
+                font-size: 17px;
+                color: #111;
+                display: block;
+                margin-bottom: 8px;
+            }
+
+            .review p {
+                margin: 0 0 10px;
+                color: #555;
+                line-height: 1.5;
+            }
+
+            .review small {
+                color: #999;
+                font-size: 13px;
+            }
+
+            .descriptioninforpara{
+                padding-top: 15px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbarShortIcon" id="navbarShortIcon" onclick="displayNavbar()">
+            <img src="image/menu_icon.png" alt="menu icon">
+        </div>
+        <div class="logoArea" id="logoArea" onclick="window.location.href='index.html'">
+            <img src="image/logo.png" alt="logo image">
+            <span class="companyName">Wooden  Dreams</span>
+        </div>
+        <nav class="headerNavbar" id="headerNavbar">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="categories.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="headerFunctionArea">
+            <div class="searchArea">
+                <img src="image/search_icon.png" alt="search icon">
+                <span>Search</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='cartpage.html'">
+                <img src="image/cart_icon.png" alt="cart icon">
+                <span id="cartitemcount">(0)</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='wishlistpage.html'">
+                <img src="image/wishlist_icon.png" alt="wishlist icon">
+                <span id="wishitemcount">(0)</span>
+            </div>
+            <button class="signInorSignUpbtn" id="signInorSignUpbtn" onclick="signinSignout()"></button>
+        </div>
+    </header>
+    <main id="productdetailcontainer">
+        
+    
+            <!-- <div class="image-gallery">
+                <div class="thumbnails">
+                    <img src="image/best_sellers/grifo.png" alt="Product image1" id="productsubimage1">
+                    <img src="image/best_sellers/grifo.png" alt="Product image2" id="productsubimage3">
+                    <img src="image/best_sellers/grifo.png" alt="Product image3" id="productsubimage2">
+                </div>
+                <div class="main-image">
+                    <img src="image/best_sellers/grifo.png" alt="Main Image" id="productmainimage">
+                </div>
+            </div>
+
+        
+            <div class="product-info">
+                <h2>Elegant Wooden Sofa Set</h2>
+                <div class="stars">⭐⭐⭐⭐☆ (123 reviews)</div>
+                <div class="price">₹19,999 <del>₹24,999</del></div>
+
+                <div class="options">
+                    <h4>Color</h4>
+                    <div class="color-squares">
+                    <div style="background:brown"></div>
+                    <div style="background:burlywood"></div>
+                    <div style="background:maroon"></div>
+                    </div>
+                </div>
+
+                <div class="options">
+                    <h4>Size</h4>
+                    <div class="size-buttons">
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    </div>
+                </div>
+
+                <div class="quantity" id="cartitemquantityarea">
+                    <h4>Quantity</h4>
+                    <button id="itemdecreasebtn">-</button>
+                    <input type="text" value="0" readonly id="cartitemquantitydisplay">
+                    <button id="itemincreasebtn">+</button>
+                </div>
+
+                <div class="buttons">
+                    <button class="add-cart">Add to Cart</button>
+                    <button class="wishlist">Add to Wishlist</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tabs container">
+            <div class="tab-buttons">
+                <button class="description">Description</button>
+                <button class="additionalinfo">Additional Info</button>
+                <button class="reviews">Reviews</button>
+            </div>
+            <div class="tab-content">
+                <p>This elegant wooden sofa set is crafted from premium solid wood, offering durability and style. Designed for modern homes, its comfortable cushions and clean finish provide both aesthetics and support for long lounging hours.</p>
+            </div> -->
+        
+        
+    </main>
+    <footer>
+        <div class="footerarea">
+            <div class="footer-section-about">
+                <div class="footerheadericon">
+                    <img src="image/logo.png" alt="Logo"><span>Wooden Dreams</span>
+                </div> 
+                <p class="footeraboutcontent">"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+                <div class="footeraddress">
+                    <div class="footeraddressitems">
+                        <img src="image/loaction_icon.png" class="icon"><p>Head Office 13/5,Post office oppsite, Chennai.876543</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/website_icon.png" class="icon"><p>www.woodendreams.in</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/mail_icon.png" class="icon"><p>woodendreams@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section-links">
+                <h3>LINKS</h3>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-help">
+                <h3>HELP</h3>
+                <ul>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-subscribe">
+                <div class="subscribe-section">
+                    <h2>Subscribe</h2>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" id="customeremail">
+                        <button>SIGN UP</button>
+                    </div>
+                </div>
+                <div class="follow-us">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <div class="socialiconbox">
+                            <img src="image/instagram_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/google_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/facebook_icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footerline">
+        <p class="footercopyright">2025 Wooden Dreams. All rights reserved.</p>
+    </footer>
+    <script src="woodenDreams.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const product = JSON.parse(localStorage.getItem("wdselectedproduct"));
+            if (product) {
+                const container = singleproductdetailsinfo(product);
+                document.getElementById("productdetailcontainer").appendChild(container);
+            } else {
+                document.getElementById("productdetailcontainer").textContent = "No product found.";
+            }
+        });
+
+        window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            // The page was restored from the cache (like going back)
+            window.location.reload(); // force reload so your logic runs again
+        }
+        });     
+
+
+        updateloginstatus()
+        updatecartcount()
+        updatewishlistcount()
+    </script>
+</body>
+</html>

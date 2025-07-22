@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="woodenDreams.css">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Wooden Dreams</title>
+    <style>
+        header{
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        
+        footer{
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+
+        
+
+        
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbarShortIcon" id="navbarShortIcon" style="cursor: not-allowed;">
+            <img src="image/menu_icon.png" alt="menu icon">
+        </div>
+        <div class="logoArea" id="logoArea" style="cursor: not-allowed;">
+            <img src="image/logo.png" alt="logo image">
+            <span class="companyName">Wooden  Dreams</span>
+        </div>
+        <nav class="headerNavbar" id="headerNavbar" style="cursor: not-allowed;">
+            <a href="" style="cursor: not-allowed;">Home</a>
+            <a href="" style="cursor: not-allowed;">About Us</a>
+            <a href="" style="cursor: not-allowed;">Categories</a>
+            <a href="" style="cursor: not-allowed;">Shop</a>
+            <a href="" style="cursor: not-allowed;">Blog</a>
+            <a href="" style="cursor: not-allowed;">Contact</a>
+        </nav>
+        <div class="headerFunctionArea" style="cursor: not-allowed;">
+            <div class="searchArea">
+                <img src="image/search_icon.png" alt="search icon">
+                <span>Search</span>
+            </div>
+            <div style="display: flex; font-size: 14px;">
+                <img src="image/cart_icon.png" alt="cart icon">
+                <span id="cartitemcount">(0)</span>
+            </div>
+            <div style="display: flex; font-size: 14px;">
+                <img src="image/wishlist_icon.png" alt="wishlist icon">
+                <span id="wishitemcount">(0)</span>
+            </div>
+            <button class="signInorSignUpbtn" style="cursor: not-allowed;">Sign In</button>
+        </div>
+    </header>
+    <main>
+        
+        <div class="signupPageDisplayPoster">
+            <div class="signuppage" id="signuppage">
+                <div class="signupcanceliconarea">
+                    <img src="image/cancel_icon.png" alt="cancel icon" class="signupcancelicon" onclick="previouspage()">
+                </div>
+                <div class="signuparea">
+                    <p >Create Account with Wooden Dreams</p>
+
+                    <form id="signupform" novalidate>
+                        <input type="text" id="name" class="inputtext" required placeholder="Full Name">
+                        <div class="error" id="nameError"></div>
+
+                        <input type="email" id="email" class="inputtext" required placeholder="Email">
+                        <div class="error" id="emailError"></div>
+
+                        <input type="tel" id="phone" maxlength="10" class="inputtext" required placeholder="Phone">
+                        <div class="error" id="phoneError"></div>
+
+                        <input type="text" id="address" class="inputtext" required placeholder="Address">
+                        <div class="error" id="addressError"></div>
+
+                        <input type="text" id="city" class="inputtext" required placeholder="City">
+                        <div class="error" id="cityError"></div>
+
+                        <input type="tel" id="pincode" maxlength="6" class="inputtext" required placeholder="Pincode">
+                        <div class="error" id="pincodeError"></div>
+
+                        <input type="password" id="password" class="inputtext" autocomplete="off" required placeholder="Password">
+                        <div class="error" id="passwordError"></div>
+
+                        <div style="display: flex; justify-content: center;">
+                            <button type="submit" class="signupbtn">Sign Up</button>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="footerarea">
+            <div class="footer-section-about">
+                <div class="footerheadericon">
+                    <img src="image/logo.png" alt="Logo"><span>Wooden Dreams</span>
+                </div> 
+                <p class="footeraboutcontent">"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+                <div class="footeraddress">
+                    <div class="footeraddressitems">
+                        <img src="image/loaction_icon.png" class="icon"><p>Head Office 13/5,Post office oppsite, Chennai.876543</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/website_icon.png" class="icon"><p>www.woodendreams.in</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/mail_icon.png" class="icon"><p>woodendreams@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section-links">
+                <h3>LINKS</h3>
+                <ul>
+                <li><a href="" style="cursor: not-allowed;">Home</a></li>
+                <li><a href="" style="cursor: not-allowed;">About</a></li>
+                <li><a href="" style="cursor: not-allowed;">Categories</a></li>
+                <li><a href="" style="cursor: not-allowed;">Shop</a></li>
+                <li><a href="" style="cursor: not-allowed;">Blog</a></li>
+                <li><a href="" style="cursor: not-allowed;">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-help">
+                <h3>HELP</h3>
+                <ul>
+                <li><a href="#" style="cursor: not-allowed;">Payment Options</a></li>
+                <li><a href="#" style="cursor: not-allowed;">Returns</a></li>
+                <li><a href="#" style="cursor: not-allowed;">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-subscribe">
+                <div class="subscribe-section">
+                    <h2>Subscribe</h2>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" id="customeremail" style="cursor: not-allowed;">
+                        <button style="cursor: not-allowed;">SIGN UP</button>
+                    </div>
+                </div>
+                <div class="follow-us">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <div class="socialiconbox">
+                            <img src="image/instagram_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/google_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/facebook_icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footerline">
+        <p class="footercopyright">2025 Wooden Dreams. All rights reserved.</p>
+    </footer>
+
+    <script src="woodenDreams.js"></script>
+    <script>
+        document.getElementById("signupform").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            let isValid = true;
+
+            // Clear all errors
+            document.querySelectorAll(".error").forEach(e => e.textContent = "");
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const address = document.getElementById("address").value.trim();
+            const city = document.getElementById("city").value.trim();
+            const pincode = document.getElementById("pincode").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            if (name === "") {
+                isValid = false;
+                document.getElementById("nameError").textContent = "Name is required.";
+            }
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                isValid = false;
+                document.getElementById("emailError").textContent = "Invalid Email Id";
+            }
+
+            if (!/^\d{10}$/.test(phone)) {
+                isValid = false;
+                document.getElementById("phoneError").textContent = "Enter a valid 10-digit Phone number.";
+            }
+
+            if (address.length < 10) {
+                isValid = false;
+                document.getElementById("addressError").textContent = "Address must be at least 10 characters.";
+            }
+
+            if (city === "") {
+                isValid = false;
+                document.getElementById("cityError").textContent = "City is required.";
+            }
+
+            if (!/^\d{6}$/.test(pincode)) {
+                isValid = false;
+                document.getElementById("pincodeError").textContent = "Enter a valid 6-digit pin code.";
+            }
+
+            if (password.length < 6) {
+                isValid = false;
+                document.getElementById("passwordError").textContent = "Password must be at least 6 characters.";
+            }
+
+            if (isValid) {
+                let userdetail = {"username":name,"useremail":email,"userphone":phone,"useraddress":address,"usercity":city,"userpincode":pincode,"userpassword":password}
+                let userdetaillist = JSON.parse(localStorage.getItem("wduserDetails")) || [];
+                userdetaillist.push(userdetail);
+                localStorage.setItem("wduserDetails",JSON.stringify(userdetaillist));
+                alert("User Details registered successfully");
+                previouspage()
+            }
+
+            this.reset();
+
+        });
+
+        window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            // The page was restored from the cache (like going back)
+            window.location.reload(); // force reload so your logic runs again
+        }
+        });
+
+        updatecartcount()
+        updatewishlistcount()
+        
+    </script>
+</body>
+</html>

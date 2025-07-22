@@ -1,0 +1,22 @@
+[
+    {"category":"Recliner","imagepath":"image/category/recliner.png"},
+    {"category":"Dining Set","imagepath":"image/category/diningset.png"},
+    {"category":"Decor","imagepath":"image/category/decor.png"},
+    {"category":"Study Tables","imagepath":"image/category/studingtables.png"},
+    {"category":"Mattress","imagepath":"image/category/mattress.png"},
+    {"category":"Beds","imagepath":"image/category/beds.png"},
+    {"category":"Wardrobes","imagepath":"image/category/wardrobes.png"},
+    {"category":"Sofa","imagepath":"image/category/sofa.png"},
+    {"category":"Chairs","imagepath":"image/category/chairs.png"},
+    {"category":"Outdoor","imagepath":"image/category/outdoor.png"},
+    {"category":"Side Table","imagepath":"image/category/sidetable.png"},
+    {"category":"Dressing Table","imagepath":"image/category/dressingtable.png"},
+    {"category":"TV Unites","imagepath":"image/category/TV unites.png"},
+    {"category":"Book Sheives","imagepath":"image/category/booksheives.png"},
+    {"category":"Coffee Tables","imagepath":"image/category/coffeetables.png"},
+    {"category":"Living","imagepath":"image/category/living.png"},
+    {"category":"Patio sets","imagepath":"image/category/patioset.png"},
+    {"category":"Garden Benches","imagepath":"image/category/gardenbenches.png"},
+    {"category":"Hutch","imagepath":"image/category/hutch.png"},
+    {"category":"Armchairs","imagepath":"image/category/armchairs.png"}
+]

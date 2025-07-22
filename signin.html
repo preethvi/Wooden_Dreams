@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="woodenDreams.css">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Wooden Dreams</title>
+    <style>
+        header{
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        footer{
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbarShortIcon" id="navbarShortIcon" style="cursor: not-allowed;">
+            <img src="image/menu_icon.png" alt="menu icon">
+        </div>
+        <div class="logoArea" id="logoArea" style="cursor: not-allowed;">
+            <img src="image/logo.png" alt="logo image">
+            <span class="companyName">Wooden  Dreams</span>
+        </div>
+        <nav class="headerNavbar" id="headerNavbar" style="cursor: not-allowed;">
+            <a href="" style="cursor: not-allowed;">Home</a>
+            <a href="" style="cursor: not-allowed;">About Us</a>
+            <a href="" style="cursor: not-allowed;">Categories</a>
+            <a href="" style="cursor: not-allowed;">Shop</a>
+            <a href="" style="cursor: not-allowed;">Blog</a>
+            <a href="" style="cursor: not-allowed;">Contact</a>
+        </nav>
+        <div class="headerFunctionArea" style="cursor: not-allowed;">
+            <div class="searchArea">
+                <img src="image/search_icon.png" alt="search icon">
+                <span>Search</span>
+            </div>
+            <div style="display: flex; font-size: 14px;">
+                <img src="image/cart_icon.png" alt="cart icon">
+                <span id="cartitemcount">(0)</span>
+            </div>
+            <div style="display: flex; font-size: 14px;">
+                <img src="image/wishlist_icon.png" alt="wishlist icon">
+                <span id="wishitemcount">(0)</span>
+            </div>
+            <button class="signInorSignUpbtn" style="cursor: not-allowed;">Sign In</button>
+        </div>
+    </header>
+    <main>
+        <div class="signinPageDisplayPoster">
+                <div class="loginpage" id="loginpage">
+            <div class="logincanceliconarea">
+                <img src="image/cancel_icon.png" alt="cancel icon" class="logincancelicon" onclick="previouspage()">
+            </div>
+            <div class="logingrid">
+                <div class="logintextarea">
+                    <img src="image/logo.png" alt="logo image" class="logoimage">
+                    <p class="logingridpara1">Wooden Dreams</p>
+                    <p class="logingridpara2">Welcome's You !</p>
+                    <img src="image/loginpage_image.png" alt="" class="loginpagestyleimage">
+                </div>
+                <div class="loginformarea">
+                    <h2 class="loginformheading">Log In</h2>
+                    <form id="signinform" class="signinform">
+                        <input type="text" id="useridarea" class="emailidarea" placeholder="Enter your Email Address">
+                        <div class="error" id="usernameError"></div>
+                        <input type="password" id="userpasswordarea" class="passwordarea" placeholder="Enter Password" autocomplete="off">
+                        <div class="error" id="passwordError"></div>
+                        <div class="remembermeAndSignupbtnarea">
+                            <label for="rememberme" style="margin-left: 5px;"><input type="checkbox" id="rememberme"> Remember Me</label>
+                            <a href="signup.html" class="signuplink">Sign Up</a><br>
+                        </div>
+                        <button type="submit" class="signinbtn">Sign In</button>
+                        <div class="error" id="SignInError"></div>
+                    </form>
+                    
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="footerarea">
+            <div class="footer-section-about">
+                <div class="footerheadericon">
+                    <img src="image/logo.png" alt="Logo"><span>Wooden Dreams</span>
+                </div> 
+                <p class="footeraboutcontent">"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+                <div class="footeraddress">
+                    <div class="footeraddressitems">
+                        <img src="image/loaction_icon.png" class="icon"><p>Head Office 13/5,Post office oppsite, Chennai.876543</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/website_icon.png" class="icon"><p>www.woodendreams.in</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/mail_icon.png" class="icon"><p>woodendreams@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section-links">
+                <h3>LINKS</h3>
+                <ul>
+                <li><a href="" style="cursor: not-allowed;">Home</a></li>
+                <li><a href="" style="cursor: not-allowed;">About</a></li>
+                <li><a href="" style="cursor: not-allowed;">Categories</a></li>
+                <li><a href="" style="cursor: not-allowed;">Shop</a></li>
+                <li><a href="" style="cursor: not-allowed;">Blog</a></li>
+                <li><a href="" style="cursor: not-allowed;">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-help">
+                <h3>HELP</h3>
+                <ul>
+                <li><a href="#" style="cursor: not-allowed;">Payment Options</a></li>
+                <li><a href="#" style="cursor: not-allowed;">Returns</a></li>
+                <li><a href="#" style="cursor: not-allowed;">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-subscribe">
+                <div class="subscribe-section">
+                    <h2>Subscribe</h2>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" id="customeremail" style="cursor: not-allowed;">
+                        <button style="cursor: not-allowed;">SIGN UP</button>
+                    </div>
+                </div>
+                <div class="follow-us">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <div class="socialiconbox">
+                            <img src="image/instagram_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/google_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/facebook_icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footerline">
+        <p class="footercopyright">2025 Wooden Dreams. All rights reserved.</p>
+    </footer>
+
+    <script src="woodenDreams.js"></script>
+    <script>
+        document.getElementById("signinform").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+
+            // Clear previous errors
+            document.querySelectorAll(".error").forEach(e => e.textContent = "");
+
+
+            const username = document.getElementById("useridarea").value.trim();
+            const password = document.getElementById("userpasswordarea").value.trim();
+
+
+            let isValid = true;
+
+            if (username === "") {
+                isValid = false;
+                document.getElementById("usernameError").textContent = "Email id is required.";
+            }
+
+            if (password === "") {
+                isValid = false;
+                document.getElementById("passwordError").textContent = "Password is required..";
+            }
+
+            if (isValid) {
+                // For now, simulate login success
+                let userdetails = JSON.parse(localStorage.getItem("wduserDetails")) || [];
+
+                if(userdetails.length === 0){
+                    alert("Please Sign Up first.")
+                }
+                
+                userdetails.forEach(users => {
+                    if( username === users.useremail ){
+                        
+                    if(password === users.userpassword ){
+                        signin(username)
+                    }
+                    else{
+                        document.getElementById("SignInError").textContent = "Sign In Credentials are invalid. Try again";
+                    }
+
+                    }else{
+                        document.getElementById("SignInError").textContent = 'User id not found. If not register, please "Signup"';
+                    }
+                });
+
+            this.reset();
+            }
+
+        });
+
+        window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            // The page was restored from the cache (like going back)
+            window.location.reload(); // force reload so your logic runs again
+        }
+        });
+        
+        updatecartcount()
+        updatewishlistcount()
+    </script>
+</body>
+</html>

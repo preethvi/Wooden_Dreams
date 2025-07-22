@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="woodenDreams.css">
+    <link rel="icon" href="image/logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Wooden Dreams</title>
+    <style>
+        .aboutusmainpage{
+            padding: 20px 80px;
+            & .aboutuspagecontent h2{
+                font-size: 36px;
+                padding-right:300px ;
+                letter-spacing: 1px;
+                font-weight: 600;
+                color: #B88E2F;
+                margin-top: 50px;
+            }
+            & .aboutuspagecontent p{
+                margin-top: 30px;
+                font-size: 24px;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+            & img{
+                display: block;
+                width: 100%;
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+        }
+
+        @media screen and (max-width:1400px) {
+            .aboutusmainpage{
+                & .aboutuspagecontent h2{
+                    font-size: 36px;
+                    padding-right:220px ;
+                    
+                }
+                & .aboutuspagecontent p{
+                    font-size: 24px;
+                }
+            }
+        }
+
+        @media screen and (max-width:1300px) {
+            .aboutusmainpage{
+                & .aboutuspagecontent h2{
+                    font-size: 33px; 
+                    padding-right:180px ;
+                }
+                & .aboutuspagecontent p{
+                    font-size: 22px;
+                }
+            }
+        }
+
+        @media screen and (max-width:1200px) {
+            .aboutusmainpage{
+                & .aboutuspagecontent h2{
+                    font-size: 28px;  
+                    padding-right:130px ;
+                }
+                & .aboutuspagecontent p{
+                    font-size: 20px;
+                }
+            }
+        }
+
+        @media screen and (max-width:1024.98px){
+            .aboutusmainpage{
+                padding: 20px 50px;
+                & .aboutuspagecontent h2{
+                    font-size: 26px;
+                    padding-right:130px ; 
+                }
+                & .aboutuspagecontent p{
+                    font-size: 18px; 
+                }
+                
+            }
+        }
+
+        @media screen and (max-width:768.98px){
+            .aboutusmainpage{
+                padding: 20px 40px;
+                & .aboutuspagecontent h2{
+                    font-size: 20px;
+                    padding-right:80px ; 
+                }
+                & .aboutuspagecontent p{
+                    font-size: 18px; 
+                }
+                
+            }
+        }
+
+        @media screen and (max-width:425.98px){
+            .aboutusmainpage{
+                padding: 20px 30px;
+                & .aboutuspagecontent h2{
+                    font-size: 18px;
+                    padding-right: 0px ; 
+                }
+                & .aboutuspagecontent p{
+                    font-size: 16px; 
+                }
+                
+            }
+        }
+
+        @media screen and (max-width:320.98px){
+            .aboutusmainpage{
+                padding: 10px 15px;
+                & .aboutuspagecontent h2{
+                    font-size: 18px;
+                    padding-right: 0px ; 
+                }
+                & .aboutuspagecontent p{
+                    font-size: 14px; 
+                }
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbarShortIcon" id="navbarShortIcon" onclick="displayNavbar()">
+            <img src="image/menu_icon.png" alt="menu icon">
+        </div>
+        <div class="logoArea" id="logoArea" onclick="window.location.href='index.html'">
+            <img src="image/logo.png" alt="logo image">
+            <span class="companyName">Wooden  Dreams</span>
+        </div>
+        <nav class="headerNavbar" id="headerNavbar">
+            <a href="index.html">Home</a>
+            <a href="aboutus.html" class="active">About Us</a>
+            <a href="categories.html">Categories</a>
+            <a href="shop.html">Shop</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="headerFunctionArea">
+            <div class="searchArea">
+                <img src="image/search_icon.png" alt="search icon">
+                <span>Search</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='cartpage.html'">
+                <img src="image/cart_icon.png" alt="cart icon">
+                <span id="cartitemcount">(0)</span>
+            </div>
+            <div style="display: flex; font-size: 14px;" onclick="window.location.href='wishlistpage.html'">
+                <img src="image/wishlist_icon.png" alt="wishlist icon">
+                <span id="wishitemcount">(0)</span>
+            </div>
+            <button class="signInorSignUpbtn" id="signInorSignUpbtn" onclick="signinSignout()"></button>
+        </div>
+    </header>
+    <main class="aboutusmainpage">
+        <div class="aboutuspagecontent">
+            <h2>From Craft to Masterpiece: The Wooden Dreams Journey</h2>
+            <p>At <span style="color: #B88E2F;">Wooden Dreams</span>, we don't just create furniture - we craft experiences, blending artistry with precision. What began as a small family workshop has evolved into a world-class factory, rooted in a passion for quality and design. Each piece that leaves our doors tells a story of meticulous craftsmanship, inspired by nature's harmony and the elegance of modern living.</p>
+            <p>Our journey is driven by a single belief: furniture should elevate not only spaces but also the lives of those who inhabit them. From the finest materials to cutting-edge techniques, we ensure that every creation exudes timeless sophistication.</p>
+            <img src="image/aboutuspageimage1.png" alt="aboutuspageimage1">
+            <h2>Designing Legacies: Our Philosophy of Timeless Craftsmanship</h2>
+            <p>At <span style="color: #B88E2F;">Wooden dreams</span>, we believe that furniture is not merely an object; it's the heart of any space. Each piece tells a story—of nature, of the hand that shaped it, and of the vision that brought it to life. Our philosophy is simple yet profound: we create for those who appreciate the art of living. Every detail, from the grain of the wood to the final polish, reflects our dedication to impeccable craftsmanship and design integrity. In our world, luxury is defined by the unseen hours of effort that go into perfecting every line and curve.</p>
+            <img src="image/aboutuspageimage2.png" alt="aboutuspageimage2">
+        </div>
+            
+        
+    </main>
+    <footer>
+        <div class="footerarea">
+            <div class="footer-section-about">
+                <div class="footerheadericon">
+                    <img src="image/logo.png" alt="Logo"><span>Wooden Dreams</span>
+                </div> 
+                <p class="footeraboutcontent">"At Wooden Dreams, we craft furniture that brings warmth and comfort to your home. Our wooden creations are designed to inspire sweet dreams and peaceful nights. Every piece is carefully crafted to provide a haven of relaxation and tranquility. Sleep tight, dream big with Wooden Dreams."</p>
+                <div class="footeraddress">
+                    <div class="footeraddressitems">
+                        <img src="image/loaction_icon.png" class="icon"><p>Head Office 13/5,Post office oppsite, Chennai.876543</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/website_icon.png" class="icon"><p>www.woodendreams.in</p>
+                    </div>
+                    <div class="footeraddressitems">
+                        <img src="image/mail_icon.png" class="icon"><p>woodendreams@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-section-links">
+                <h3>LINKS</h3>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="categories.html">Categories</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-help">
+                <h3>HELP</h3>
+                <ul>
+                <li><a href="#">Payment Options</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section-subscribe">
+                <div class="subscribe-section">
+                    <h2>Subscribe</h2>
+                    <div class="subscribe-form">
+                        <input type="email" placeholder="Enter your email" id="customeremail">
+                        <button>SIGN UP</button>
+                    </div>
+                </div>
+                <div class="follow-us">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <div class="socialiconbox">
+                            <img src="image/instagram_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/google_icon.png" alt="">
+                        </div>
+                        <div class="socialiconbox">
+                            <img src="image/facebook_icon.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="footerline">
+        <p class="footercopyright">2025 Wooden Dreams. All rights reserved.</p>
+    </footer>
+
+    <script src="woodenDreams.js"></script>
+    <script>
+
+        window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            // The page was restored from the cache (like going back)
+            window.location.reload(); // force reload so your logic runs again
+        }
+        });
+        
+        updateloginstatus()
+        updatecartcount()
+        updatewishlistcount()
+    </script>
+</body>
+</html>
